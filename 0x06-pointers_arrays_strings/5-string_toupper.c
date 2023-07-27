@@ -9,9 +9,9 @@ char *string_toupper(char *str)
 {
 	while (*str != '\0')
 	{
-		if (*str >= 97 && *str <= 122)
+		if (*str >= 'a' && *str <= 'z')
 		{
-			*str -= 32;
+			*str -= ('a' - 'A');
 		}
 		str++;
 	}
