@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * wildcmp - Compare two strings with wildcard 
+ * wildcmp - Compare two strings with wildcard
  * @s1: String
  * @s2: String with wildcard
- *
  * Return: 1 if considered identical, 0 otherwise
  */
 int wildcmp(char *s1, char *s2)
