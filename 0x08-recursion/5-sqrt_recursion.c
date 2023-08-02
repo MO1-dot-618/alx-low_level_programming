@@ -9,7 +9,9 @@
 int formula(int x, int n)
 {
 	if ((x * x) < n)
-		formula(x + 1, n);
+	{
+		return (formula(x + 1, n));
+	}
 	else if ((x * x) == n)
 	{
 		return (x);
