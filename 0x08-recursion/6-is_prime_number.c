@@ -29,5 +29,8 @@ int formula(int x, int n)
  */
 int is_prime_number(int n)
 {
-	return (formula(2, n));
+	if (n == 1)
+		return (0);
+	else
+		return (formula(2, n));
 }
