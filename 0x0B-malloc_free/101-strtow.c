@@ -14,7 +14,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	if ((str[0] == ' ' || str[0] == '       ') && (str[1] > 32))
+	if ((str[0] == ' ' || str[0] == '	') && (str[1] > 32))
 		count++;
 	for (i = 1; str[i + 1] != '\0'; i++)
 	{
