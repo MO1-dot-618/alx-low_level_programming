@@ -14,9 +14,11 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i] != '\0'; i++)
+	if ((str[0] == ' ' || str[0] == '       ') && (str[1] > 32))
+		count++;
+	for (i = 1; str[i + 1] != '\0'; i++)
 	{
-		if ((str[i] == ' ' || str[i] == '	') && (str[i + 1] > 32) && (str[i - 1] > 32))
+		if ((str[i] == ' ' || str[i] == '	') &&(str[i + 1] > 32 && str[i - 1] > 32))
 			count++;
 	}
 	s = (char **)malloc(sizeof(char *) * (count + 1));
