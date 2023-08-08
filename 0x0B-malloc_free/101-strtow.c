@@ -27,8 +27,9 @@ char **strtow(char *str)
 	}
 	for (i = 0; i < count; i++)
 	{
-		for (j = j + 1; str[j] != ' '; j++)
+		for (j = j; str[j] != ' '; j++)
 			size++;
+		j++;
 		s[i] = (char *)malloc(sizeof(char) * (size + 1));
 		if (s[i] == NULL)
 		{
@@ -39,7 +40,7 @@ char **strtow(char *str)
 		}
 		for (z = 0; z < size; z++)
 		{
-			s[i][z] = str[z + j - size];
+			s[i][z] = str[z + j - 1 - size];
 		}
 		s[i][size] = '\0';
 		size = 0;
