@@ -3,7 +3,7 @@
 /**
  * _calloc - allocate space for an array
  * @size: unsigned int
- * @c: char
+ * @nmemb: unsigned int
  * Return: pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
