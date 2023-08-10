@@ -110,7 +110,7 @@ int main(int argc, char *argv[] __attribute__((unused)))
 {
 	int i, mul;
 
-	if (argc != 2)
+	if (argc != 3)
 	{
 		_puts("Error");
 		exit(98);
