@@ -133,6 +133,7 @@ int main(int argc, char *argv[] __attribute__((unused)))
 	}
 	mul = _atoi(argv[1]) * _atoi(argv[2]);
 	print_number(mul);
+	_putchar('\n');
 
 	return (0);
 }
