@@ -106,7 +106,7 @@ void print_number(int n)
  * @argv: string
  * Return: int
  */
-void main(int argc, char *argv[] __attribute__((unused)))
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	int i, mul;
 
@@ -133,4 +133,6 @@ void main(int argc, char *argv[] __attribute__((unused)))
 	}
 	mul = _atoi(argv[1]) * _atoi(argv[2]);
 	print_number(mul);
+
+	return (0);
 }
