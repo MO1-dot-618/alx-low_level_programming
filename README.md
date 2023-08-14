@@ -1,1 +1,1 @@
-malloc free
+struct typedef
