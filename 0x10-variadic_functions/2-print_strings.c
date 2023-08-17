@@ -4,12 +4,12 @@
 #include <stdio.h>
 #include <string.h>
 /**
-  * print_numbers - prints numbers in arguments
-  * @separator: separator of integers
-  * @n: number of integers to print
+  * print_strings - prints strings in arguments
+  * @separator: separator 
+  * @n: number ofstrings to print
   * Return: void
   */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	va_list args;
