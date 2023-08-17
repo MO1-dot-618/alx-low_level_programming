@@ -13,10 +13,14 @@ void print_all(const char * const format, ...)
 	char *str;
 	const char *forma = format;
 	va_list args;
+	int i = 0;
 
 	va_start(args, format);
-	while (*forma)
+	while (forma && *forma)
 	{
+		if (i > 0)
+			printf(", ");
+		i++;
 		switch (*forma)
 		{
 			case 'c':
@@ -39,6 +43,8 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 			}
+			default:
+				i = 0;
 		}
 		forma++;
 	}
