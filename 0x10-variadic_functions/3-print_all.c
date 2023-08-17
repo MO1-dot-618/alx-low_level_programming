@@ -40,7 +40,6 @@ void print_all(const char * const format, ...)
 				break;
 			}
 		}
-		printf(", ");
 		forma++;
 	}
 	printf("\n");
