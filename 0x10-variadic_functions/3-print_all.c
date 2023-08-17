@@ -10,7 +10,6 @@
   */
 void print_all(const char * const format, ...)
 {
-	int sep;
 	char *str;
 	const char *forma = format;
 	va_list args;
@@ -18,7 +17,6 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (*forma)
 	{
-		sep = 1;
 		switch (*forma)
 		{
 			case 'c':
@@ -41,12 +39,8 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 			}
-			default:
-				sep = 0;
-				break;
 		}
-		if (sep == 1)
-			printf(", ");
+		printf(", ");
 		forma++;
 	}
 	printf("\n");
