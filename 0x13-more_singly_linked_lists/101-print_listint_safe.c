@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (index != NULL)
 	{
-		printf("[0x%h] %u\n", index->n, index->n);
+		printf("[0x%x] %u\n", index->n, index->n);
 		index = index->next;
 		n++;
 	}
