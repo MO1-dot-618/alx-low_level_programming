@@ -3,19 +3,19 @@
 #include "lists.h"
 
 /**
- * free_listint - free all lists
+ * free_listint2 - free all lists
  * @head: pointer to head node
  * Return: no return
  */
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *last;
 
-	while (head != NULL)
+	while (*head != NULL)
 	{
-		last = head;
-		head = head->next;
+		last = *head;
+		*head = (*head)->next;
 		free(last);
 	}
-	free(head);
+	free(*head);
 }
