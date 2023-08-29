@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of list
+ * add_nodeint - adds a new node at the beginning of list
  * @head: pointer to head node
  * @n: int
  * Return: address of created node
