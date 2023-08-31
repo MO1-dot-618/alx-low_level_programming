@@ -1,6 +1,22 @@
 #include "main.h"
 #include <stddef.h>
-#include <math.h>
+
+/**
+ * Pow - power
+ * @a: int
+ * @b: int
+ * Return: power
+ */
+int Pow(int a, int b)
+{
+	int power = 1, i;
+
+	for (i = 1; i <= b; ++i)
+	{
+		power = power * a;
+	}
+	return (power);
+}
 
 /**
  * binary_to_uint - Converts a binary number to an unsigned int
@@ -26,7 +42,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (j = 0; j < i; j++)
 	{
-		dec += (b[j] - 48) * pow(2, (i - j - 1));
+		dec += (b[j] - 48) * Pow(2, (i - j - 1));
 	}
 	return (dec);
 }
