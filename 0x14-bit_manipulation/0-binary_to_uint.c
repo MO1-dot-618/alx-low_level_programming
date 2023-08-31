@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <math.h>
 
 /**
  * binary_to_uint - Converts a binary number to an unsigned int
@@ -25,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (j = 0; j < i; j++)
 	{
-		dec += (b[j] - 48) * (2 * *(i - j - 1));
+		dec += (b[j] - 48) * pow(2, (i - j - 1));
 	}
 	return (dec);
 }
