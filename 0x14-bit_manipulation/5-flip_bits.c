@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * clear_bit - returns number of bits that need to flip
+  * flip_bits - returns number of bits that need to flip
   * @m: number
   * @n: number
   * Return: number of bits that need to flip
