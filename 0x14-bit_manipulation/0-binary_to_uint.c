@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * Pow - power
@@ -26,7 +25,7 @@ int Pow(int a, int b)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, dec, j;
+	unsigned int i = 0, dec = 0, j;
 
 	if (b == NULL)
 	{
