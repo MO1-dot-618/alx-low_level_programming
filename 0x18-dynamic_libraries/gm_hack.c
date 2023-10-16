@@ -1,6 +1,7 @@
-#include <unistd.h>
-int main()
+int rand(void)
 {
-	write(1,"9 8 10 24 75 - 9\n--> Please make me win!\n",41);
-	return(0);
+	static int i = -1;
+	int randoms[6] = {9, 8, 10, 24, 75, 9};
+	i++;
+	return(randoms[i]);
 }
