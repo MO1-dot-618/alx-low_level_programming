@@ -23,17 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (ht->array[index] == NULL)
 			return (0);
 		ht->array[index]->key = strdup(key);
-		if (!ht->array[index]->key)
-		{
-			free(ht->array[index]);
-			return (0);
-		}
 		ht->array[index]->value = strdup(value);
-		if (!ht->array[index]->value)
-		{
-			free(ht->array[index]);
-			return (0);
-		}
 		ht->array[index]->next = NULL;
 	}
 	else
@@ -43,17 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (new == NULL)
 			return (0);
 		new->key = strdup(key);
-		if (!new->key)
-		{
-			free(new);
-			return (0);
-		}
 		new->value = strdup(value);
-		if (!new->value)
-		{
-			free(new);
-			return (0);
-		}
 		new->next = temp;
 		ht->array[index] = new;
 	}
