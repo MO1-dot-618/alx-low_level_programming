@@ -1,0 +1,11 @@
+# Makefile
+
+CC = gcc
+SRC = main.c school.c
+
+all: $(SRC)
+	$(CC) -o school $(SRC)
+
+clean:
+	rm -f school
+
