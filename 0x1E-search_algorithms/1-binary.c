@@ -10,13 +10,18 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	int start = 0, end = (int) size - 1;
-	int middle;
+	int start = 0, end = (int)size - 1;
+	int middle, i;
 
 	while (end >= start)
 	{
 		middle = (start + end) / 2;
-		printf("Value checked array[%d] = [%d]\n", middle, array[middle]);
+		printf("Searching in array: ");
+		for (i = start; i < end; i++)
+		{
+			printf("%d, ", array[i]);
+		}
+		printf("%d\n", array[i]);
 		if (array[middle] == value)
 			return (middle);
 		else if (array[middle] > value)
